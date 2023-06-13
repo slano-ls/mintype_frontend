@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <main style={{ flex: 1 }}>{children}</main>
             <div style={{ textAlign: "center", marginTop: "auto", }}>
                 <p style={{ color: "var(--sub-color)", fontFamily: 'lexend', fontWeight: 'normal' }}>
-                    Designed and built by <Link href={"https://github.com/Rohith-JN"} style={{ textDecoration: "underline", color: "var(--sub-color)" }}>Rohith JN</Link>
+                    Built by <Link href={"https://github.com/slano-ls"} style={{ textDecoration: "underline", color: "var(--sub-color)" }}>Saihaj Law</Link>
                 </p>
             </div>
         </div>
