@@ -1,0 +1,79 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.NavBar {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-around;  
+    align-items: center;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--sub-alt-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width:35rem;
+    width: 30rem;
+}
+h1.Paragraph {
+    font-family: 'lexend';
+    font-size: 1.5rem;
+    line-height: 3rem;
+    cursor: pointer;
+    color: var(--sub-color);
+    font-weight: normal;
+}
+h1.NavText {
+    font-family: 'lexend';
+    font-size: 1rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    color: var(--sub-color);
+    font-weight: normal;
+    transition: 0.3s;
+}
+
+h1.NavText:hover {
+    color: var(--text-color);
+}
+.Divider {
+    width: 0.25rem;
+    height: 1.25rem;
+    border-radius: 0.375rem;
+    background-color: var(--bg-color);
+}
+
+@media screen and (max-width: 750px){
+    .NavBar {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .NavBar h1.theme, .theme {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .NavBar {
+        width: 20rem; 
+    }
+}
+@media screen and (max-width: 400px){
+    .NavBar {
+        width: 16rem; 
+    }
+}
+@media screen and (max-width: 350px) {
+    h1.NavText {
+        font-size: 0.8rem;
+    }
+    .NavBar {
+        width: 14rem;
+    }
+}

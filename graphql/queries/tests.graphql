@@ -1,0 +1,8 @@
+query Tests($uid: String!) {
+  tests(uid: $uid) {
+      wpmData
+      accuracyData
+      labels
+      testTaken
+  }
+}

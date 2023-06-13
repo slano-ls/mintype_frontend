@@ -1,0 +1,96 @@
+.Navbar {
+    display: flex; 
+    margin-top: 1rem;
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.NavContainer {
+    display: flex; 
+    flex-direction: row; 
+    max-width: 57rem;
+    width: 57rem; 
+    height: 4rem; 
+}
+
+.Nav {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    height: 4rem; 
+}
+
+h1.heading {
+    font-size: 2.7rem;
+    line-height: 1; 
+    font-family: 'lexend';
+    color: var(--text-color);
+    font-weight: normal;
+}
+.Nav h1 span {
+    color: var(--main-color);
+}
+.NavItems .NavOptions {
+    display: flex; 
+    margin-top: 0.3rem; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 3rem; 
+}
+.NavItems .IconOptions {
+    margin-top: 1rem; 
+    display: none;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.NavText {
+    font-size: 1.15rem;
+    line-height: 1.75rem; 
+    cursor: pointer; 
+    font-family: 'lexend';
+    color: var(--sub-color);
+    font-weight:normal;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.NavText:hover {
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 800px){
+    h1.heading {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 650px){
+    .NavItems .NavOptions {
+        display: none;
+    }
+    .NavItems .IconOptions {
+        display: flex;
+    }
+}   
+@media screen and (max-width: 500px){
+    h1.heading {
+        font-size: 2.4rem;
+    }
+    .NavItems .IconOptions {
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 400px){
+    h1.heading {
+        font-size: 2rem;
+    }
+    .NavItems .IconOptions {
+        margin-top: 0.7rem;
+    }
+}
