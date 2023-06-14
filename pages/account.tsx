@@ -2,7 +2,7 @@ import Login from '../components/account/Login';
 import Signup from '../components/account/Signup';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Account.module.css';
-import Chart from '../components/account/Chart';
+import Chart from '../components/account/Charts';
 import { getTheme } from '../utils/getTheme';
 import { NextPageContext } from 'next';
 import ConditionalRenderer from '../components/other/ConditionalRenderer';
