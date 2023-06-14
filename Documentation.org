@@ -1,0 +1,114 @@
+
+#+title: Documentation
+
+* Introduction to MinType
+
+Hello, and welcome to my new **typing experience**, which is called MinType!
+
+If you are viewing this, you likely have checked out the website already; and if so... thank you!
+
+If somehow you haven't yet gotten to the point of checking out the website, feel free to do that first so the rest of this makes sense.
+
+[[https:mintype-frontend.vercel.app][Link to Website]]
+
+MinType is a minimal typing platform which is packed with a bunch of cool features which we will go over in this documentation. While also being a great way to check your WPM and other metrics of typing skills, MinType also implements a strategic **matching pattern** in order to help you practice your typing skills on words which you commonly make mistakes on.
+
+Furthermore, through statistical calculations and demonstrations, MinType is also able to tell you where and when you make mistakes typing, as well as your consistency and other metrics (/through a very aesthetic graph if I have to say/)
+
+Additionally, the user is offered many customizations such as themes, and other configurations which they may desire to do; and therefore the MinType experience is more than just my ideas, but rather what you come up with as well.
+
+Let me first begin by explaining how to get everything set up.
+
+
+* Installation
+
+If you are a casual user, and just want to fiddle around and practice typing on MinType, you're in luck! The instructions for this section are easy.
+
+1. Navigate to the site -> [[mintype-frontend.vercel.app]]
+2. Create an Account (not necessary, but I would recommend to keep track of your own score)
+3. Sign in with your newly made account
+4. Begin Typing!
+
+If you are a more involved user, or would like to run this locally/contribute/view the code, the following instructions are for you.
+
+** Development Installation Process
+
+Before we walk though this, make sure each step is clear. If you just wish to contribute for a simple pull request, not all of this is needed; a simple git clone and some other commands are all you need **This is for an involved user**, so keep that in mind.
+
+*** Frontend Installation
+1. Fork/Clone the Frontend [[https://www.github.com/slano-ls/mintype-frontend][Repository]], this is up to you on how you want to do it, but if you fork it then make sure you are cloning your newly forked repository locally.
+2. Now that you have it installed, navigate into your local directory
+
+   #+begin_src shell
+cd ~/<name of directory>
+   #+end_src
+
+3. Now that you are in your given directory we can get set up
+4. Take a look at the =.env.local=  folder, and clear out any information on the lines... it should look like this when completed
+   #+begin_src env
+NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY=""
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=""
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=""
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=""
+NEXT_PUBLIC_FIREBASE_APP_ID=""
+NEXT_PUBLIC_BACKEND_URL="http://localhost:4000/graphql"
+NEXT_PUBLIC_NODE_ENV="dev"
+   #+end_src
+
+   1. If you wish to, you are able to change the =NEXT_PUBLIC_BACKEND_URL= to whatever you wish for it to be, but for this installation process we will stick to that
+5. Create a Firebase Account
+6. Create a project on Firebase, and enable authentication on your new project
+7. Enable an email/password provider as well (to store user credentials safely)
+8. Navigate to the *Project Settings* page, and then find the section which lists your *credentials*
+9. Copy and paste the information into your =.env.local= file as written on the credentials page
+10. Now you can go back to the terminal page where you are in the correct directory
+11. Run the following command
+
+#+begin_src shell
+npm install
+#+end_src
+
+12. This will install all your necessary dependencies for the project, and you are now done setting up the frontend!
+
+On to the back-end...
+
+*** Back-end Installation
+1. Clone/Fork the Backend [[https://www.github.com/slano-ls/mintype-backend][Repository]]
+2. Git Clone it onto your local machine
+3. Create a .env file
+
+#+begin_src shell
+touch .env
+#+end_src
+
+4. Copy the variables into the =.env= file, it should look like this...
+
+#+begin_src env
+DATABASE_URL=""
+PGDATABASE=""
+PGHOST=""
+PGPASSWORD=""
+PGPORT=
+PGUSER=""
+NODE_ENV="dev"
+CORS_ORIGIN="http://localhost:3000"
+PORT=4000
+#+end_src
+
+5. Set Up *Postgresql* on your local device (through your local package manager or the website)
+6. Navigate into your directory
+7. Import =migration: migration1684564075219= into =src/data-source.ts= add it to =migrations=
+8. Run the following commands
+
+   #+begin_src shell
+npm run migrations:run
+
+npm install
+   #+end_src
+
+9. You are now complete!
+
+* Technical Documentation
+
+f
