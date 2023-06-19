@@ -22,9 +22,9 @@ const Navbar = () => {
     const { asPath } = useRouter();
     const { authUser, signOut } = useAuth()
     const options = useMemo(() => [
-        { id: 1, optionText: 'type', route: '/', optionIcon: <BsKeyboardFill size={25} /> },
-        { id: 2, optionText: 'account', route: '/account', optionIcon: <RiAccountCircleFill size={25} /> },
-        { id: 3, optionText: 'leaderboard', route: '/leaderboard', optionIcon: <MdLeaderboard size={25} /> },
+        { id: 1, optionText: 'type', route: '/', optionIcon: <BsKeyboardFill size={55} /> },
+       // { id: 2, optionText: 'account', route: '/account', optionIcon: <RiAccountCircleFill size={25} /> },
+       // { id: 3, optionText: 'leaderboard', route: '/leaderboard', optionIcon: <MdLeaderboard size={25} /> },
     ], []);
     let currentId = 0;
     options.map((option) => {
